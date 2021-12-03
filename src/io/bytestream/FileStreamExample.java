@@ -14,12 +14,12 @@ public class FileStreamExample {
         byte[] buffer = new byte[1024];
 
         File toFile = new File("C:/download/video.avi");
-        FileOutputStream os  = new FileOutputStream(toFile);
+        FileOutputStream os = new FileOutputStream(toFile);
 
-        int cnt=0;
-        int k =0;
-        while((cnt=is.read(buffer))!=-1){
-            os.write(buffer,0,cnt);
+        int cnt = 0;
+        int k = 0;
+        while ((cnt = is.read(buffer)) != -1) {
+            os.write(buffer, 0, cnt);
             k++;
         }
 
@@ -28,9 +28,9 @@ public class FileStreamExample {
 
 
         long after = System.currentTimeMillis();
-        System.out.println("[Read & Write] "+k+" times");
+        System.out.println("[Read & Write] " + k + " times");
         FileInfo.fileSizeDesc(toFile);
-        FileInfo.durationDesc(after-before);
+        FileInfo.durationDesc(after - before);
 
     }
 }

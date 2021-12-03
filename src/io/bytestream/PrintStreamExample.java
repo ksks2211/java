@@ -13,8 +13,8 @@ public class PrintStreamExample {
         out.println(true);
         out.print("Hello\t World \n");
 
-        out.printf("I am %d years old\n",10);
-        out.printf("I am  %.2f cm tall\n",190.999999);
+        out.printf("I am %d years old\n", 10);
+        out.printf("I am  %.2f cm tall\n", 190.999999);
 
     }
 }

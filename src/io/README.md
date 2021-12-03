@@ -2,6 +2,7 @@
 
 ## [Byte Stream](./bytestream "Byte Stream")
 
+- InputStream, OutputStream
 - FileInputStream, FileOutputStream
 - ByteArrayInputStream, ByteArrayOutputStream
 - SequenceInputStream

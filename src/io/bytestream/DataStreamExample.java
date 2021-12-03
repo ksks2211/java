@@ -5,14 +5,14 @@ import java.io.*;
 public class DataStreamExample {
     public static void main(String[] args) throws IOException {
 
-        int a=10;
+        int a = 10;
         boolean b = true;
         char c = 'G';
         double d = 3.14;
         String e = "Hello";
 
 
-        System.out.println(a+","+b+","+c+","+d+","+e);
+        System.out.println(a + "," + b + "," + c + "," + d + "," + e);
         DataOutputStream os = new DataOutputStream(new FileOutputStream("C:/upload/save.tmp"));
 
         os.writeInt(a);
@@ -24,7 +24,6 @@ public class DataStreamExample {
         os.close();
 
 
-
         DataInputStream is = new DataInputStream(new FileInputStream("C:/upload/save.tmp"));
 
         a = is.readInt();
@@ -32,7 +31,7 @@ public class DataStreamExample {
         c = is.readChar();
         d = is.readDouble();
         e = is.readUTF();
-        System.out.print(a+","+b+","+c+","+d+","+e);
+        System.out.print(a + "," + b + "," + c + "," + d + "," + e);
 
 
     }
