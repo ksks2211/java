@@ -30,18 +30,17 @@ public class FileInfo {
             System.out.println("[File Size] "+Math.round(length)+unit);
         }
     }
-    public static void durationDesc(long _duration){
+    public static void durationDesc(long _duration, String title){
 
 
 
-        System.out.println("--------------------------------------------------------");
+        System.out.printf("----------------------------%s----------------------------\n",title);
         double duration = (long)_duration;
         String unit = " ms";
         if (duration>1000){
             unit=" s";
             duration/=1000;
         }
-        System.out.println("[File Download Time] "+duration+unit);
-        System.out.println("--------------------------------------------------------");
+        System.out.println("[File Process Time] "+duration+unit);
     }
 }
