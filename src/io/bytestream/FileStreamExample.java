@@ -30,7 +30,7 @@ public class FileStreamExample {
         long after = System.currentTimeMillis();
         System.out.println("[Read & Write] " + k + " times");
         FileInfo.fileSizeDesc(toFile);
-        FileInfo.durationDesc(after - before);
+        FileInfo.durationDesc(after - before,"");
 
     }
 }
