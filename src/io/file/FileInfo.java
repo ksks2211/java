@@ -2,6 +2,7 @@ package io.file;
 
 import java.io.File;
 
+
 public class FileInfo {
     public static void fileSizeDesc(File file){
         if(file.exists()) {
@@ -30,6 +31,9 @@ public class FileInfo {
         }
     }
     public static void durationDesc(long _duration){
+
+
+
         System.out.println("--------------------------------------------------------");
         double duration = (long)_duration;
         String unit = " ms";

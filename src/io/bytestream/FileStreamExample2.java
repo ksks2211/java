@@ -2,6 +2,10 @@ package io.bytestream;
 
 import java.io.*;
 
+/**
+ * Append FIle
+ */
+
 public class FileStreamExample2 {
     public static void main(String[] args) throws IOException {
         File file = new File("C://upload/exfile.txt");
