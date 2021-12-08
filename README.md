@@ -6,7 +6,6 @@
 ## [java.io](./src/io)
 - stream
 - file
-- network
 
 ----
 ## java.nio
