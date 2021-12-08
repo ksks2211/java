@@ -1,4 +1,4 @@
-package net.address;
+package net.url;
 
 import java.io.*;
 import java.net.HttpURLConnection;
