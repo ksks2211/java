@@ -9,10 +9,13 @@
   - IP주소와 포트번호를 나타내는 클래스
 
 
-## URL
+## URL & URI
 - URL
   - protocol, hostname, port, path, query, anchor 의 정보를 가진 URL을 나타내는 클래스
-  
+- URLConnection
+  - Application과 URL 사이의 통신연결을 나타내는 추상클래스
+  - 구현 클래스로 HttpURLConnection, JarURLConnection 등이 있음
+- URI
 ## TCP
 - ServerSocket
   - 서버에만 존재, 클라이언트의 연결요청을 처리하는 역할
