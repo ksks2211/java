@@ -7,13 +7,11 @@
 - stream
 - file
 ----
-## java.nio
-- path
-- file
+## [java.nio](./src/nio)
+- file, path
 - channel
-
+- buffer
 ----
-
 
 ## [java.net](./src/net)
 - address
