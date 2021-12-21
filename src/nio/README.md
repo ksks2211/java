@@ -17,3 +17,28 @@
 - FileSystems
 - FileStore
   - 파일저장소를 나타냄
+- WatchService
+  - 디렉토리 내부의 파일생성, 삭제, 수정 등의 변화 감지
+  - path.register() 메서드로 등록
+  - 변화가 발생하면 WatchEvent 발생
+- WatchKey
+  - WatchEvent 발생하면 생성
+  - WatchService 인스턴스의 take()메서드의 반환타입
+- WatchEvent
+  - 특정 path에서 발생한 생성,수정,삭제 등의 이벤트
+
+
+
+## Buffer
+ - Buffer
+   - 버퍼를 나타내는 추상클래스, NIO에서는 데이터 입출력에 항상 버퍼 사용
+   - 버퍼는 읽고쓰기가 가능한 메모리 배열
+   - Direct(OS가 관리), Non-Direct 2종류의 버퍼 생성가능
+ - ByteBuffer
+ - CharBuffer
+ - ShortBuffer
+ - IntBuffer
+ - LongBuffer
+ - FloatBuffer
+ - DoubleBuffer
+ - MappedByteBuffer
