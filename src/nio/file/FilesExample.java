@@ -12,6 +12,8 @@ public class FilesExample {
 
     public static void main(String[] args) throws IOException {
 
+
+
         Path file1 = Paths.get("C:/tmp/lyrics.txt");
         Path dir1 = Paths.get("C:/tmp");
         Path notExists = Paths.get("C:/tmp/tmp/tmp");
