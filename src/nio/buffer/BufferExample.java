@@ -2,6 +2,7 @@ package nio.buffer;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,7 +10,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.EnumSet;
 
-public class BufferExample2 {
+public class BufferExample {
     public static void main(String[] args) throws IOException {
         Path from = Paths.get("C:/tmp/image.jpg");
 
@@ -40,19 +41,31 @@ public class BufferExample2 {
         }
         end= System.nanoTime();
 
-        System.out.println("[Non-Direct Buffer] "+(end-start)+" ns");
+        System.out.println("[Non-Direct Buffer]\t"+(end-start)+" ns");
 
         fileChannel_from.position(0);
 
         start = System.nanoTime();
         for(int i=0;i<100;i++){
             fileChannel_from.read(directBuffer);
-            nonDirectBuffer.flip();
+            directBuffer.flip();
             fileChannel_to1.write(directBuffer);
-            nonDirectBuffer.clear();
+            directBuffer.clear();
         }
         end= System.nanoTime();
-        System.out.println("[Direct Buffer] "+(end-start)+" ns");
+        System.out.println("[  Direct Buffer  ]\t"+(end-start)+" ns");
+
+
+        directBuffer.order(ByteOrder.nativeOrder());
+        start = System.nanoTime();
+        for(int i=0;i<100;i++){
+            fileChannel_from.read(directBuffer);
+            directBuffer.flip();
+            fileChannel_to1.write(directBuffer);
+            directBuffer.clear();
+        }
+        end= System.nanoTime();
+        System.out.println("[  Direct Buffer  ]\t"+(end-start)+" ns");
 
 
         fileChannel_from.close();
