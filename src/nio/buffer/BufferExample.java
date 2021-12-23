@@ -10,6 +10,9 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.EnumSet;
 
+/*
+* Direct vs Non-Direct Buffer Comparison
+* */
 public class BufferExample {
     public static void main(String[] args) throws IOException {
         Path from = Paths.get("C:/tmp/image.jpg");

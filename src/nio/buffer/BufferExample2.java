@@ -1,23 +1,30 @@
 package nio.buffer;
 
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.IntBuffer;
 
+/*
+* Buffer Properties
+* */
 public class BufferExample2 {
     public static void main(String[] args) {
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(100);
-        System.out.println("[Capacity] : "+byteBuffer.capacity());
+        bufferDesc(byteBuffer);
 
         CharBuffer charBuffer = ByteBuffer.allocateDirect(100).asCharBuffer();
-        System.out.println("[Capacity] : "+charBuffer.capacity());
-
+        bufferDesc(charBuffer);
 
         IntBuffer intBuffer = ByteBuffer.allocateDirect(100).asIntBuffer();
+        bufferDesc(intBuffer);
 
-        System.out.println("[Capacity] : "+intBuffer.capacity());
+    }
 
-
-
+    public static void bufferDesc(Buffer buffer){
+        System.out.println("[Capacity] : "+buffer.capacity());
+        System.out.println("[limit] : "+buffer.limit());
+        System.out.println("[position] : "+buffer.position());
+        System.out.println("===============================");
     }
 }
