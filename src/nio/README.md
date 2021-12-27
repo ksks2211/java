@@ -46,6 +46,9 @@
     - Utility methods for channels and streams
 - FileChannel
     - reading, writing, mapping, and manipulating a file
+- AsynchronousFileChannel
+  - 비동기 방식으로 동작, 스레드풀에 작업요청하고 즉시 void 리턴
+  - 작업완료시 생성시 등록된 CompletionHandler completed or failed 메서드 호출
 
 ## nio.charset
 
